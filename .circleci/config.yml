@@ -16,8 +16,10 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! from $name."
-
+          command: |
+            echo "Hello, World! from $name."
+            printenv
+            
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
